@@ -1,5 +1,7 @@
 # hello-effect
+Basic project to test using effect-ts in a composable payments workflow
 
+## Usage
 To install dependencies:
 
 ```bash
