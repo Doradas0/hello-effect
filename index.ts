@@ -1,5 +1,7 @@
 import { Effect, Match, pipe, Random } from "effect";
 
+// ==================== Types & Errors ====================
+
 class ValidationError extends Error {
   readonly _tag = "ValidationError";
 }
@@ -43,6 +45,8 @@ const validateCCCountry = (country: string) =>
     : Effect.fail(new ValidationError("Invalid PayPal country"));
 
 const sendCCPayment = (payment: CreditCardDetails) =>
+  // Using the built in random generator to simulate a call to external service
+  // failing for whatever reason
   Random.next.pipe(
     Effect.andThen((n) =>
       n > 0.5
@@ -71,6 +75,8 @@ const validatePayPalCountry = (country: string) =>
     : Effect.fail(new ValidationError("Invalid PayPal country"));
 
 const sendPayPalPayment = (payment: PayPalDetails) =>
+  // Using the built in random generator to simulate a call to external service
+  // failing for whatever reason
   Random.next.pipe(
     Effect.andThen((n) =>
       n > 0.5

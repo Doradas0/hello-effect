@@ -1,13 +1,20 @@
 # hello-effect
 Basic project to test using effect-ts in a composable payments workflow
 
-## My thoughts
-
 This is just to scratch the surface of using effect. It only handles 
 sync requests though it should be the same for handling Promises too,
 just have to change the run command to runPromiseExit. It would be
 interesting to see a more complete example but the few hours I spent with
 with the package revealed a lot.
+
+I only spent a couple of hours on this so there's a lot of the package
+I haven't covered. My aim was to see how easily I could create a basic
+logic flow using the package. I was more focused on what could I build
+rather than how Effect works, the end result matters more than the tool
+to get there.
+
+
+## My thoughts
 
 What worked well was being able to create dedicated handlers and
 functions that could then be composed in a single pipeline. No need for
